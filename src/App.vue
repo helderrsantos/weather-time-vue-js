@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import Card from "./components/Card.vue";
+import CardMain from "./components/CardMain.vue";
 </script>
 
 <template>
   <div class="container">
-    <Card msg="Agora foi!" />
-    <Card msg="Agora foi!" />
-    <Card msg="Agora foi!" />
-    <Card msg="Agora foi!" />
+    <CardMain msg="Agora foi!" />
+    <CardMain msg="Agora foi!" />
+    <CardMain msg="Agora foi!" />
+    <CardMain msg="Agora foi!" />
   </div>
 </template>
 
