@@ -1,0 +1,25 @@
+:root { 
+  background-color: #242424;  
+  background-image: url(./assets/Background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;  
+  
+}
+
+
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+  text-align: center;
+  
+}
+
+
