@@ -1,25 +1,24 @@
-:root { 
-  background-color: #242424;  
-  background-image: url(./assets/Background.svg);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  background-image: url(./assets/imagens/Background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-body {
-  margin: 0;  
-  
-}
 
 
 
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto; 
-  text-align: center;
-  
-}
 
 
