@@ -1,12 +1,23 @@
-<script setup lang="ts">
-import CardMain from './components/CardMain.vue';
-</script>
-
 <template>
-  <CardMain />
+  <DisplayPanel :card-name="cardname"/>
+
 </template>
 
-<style>
-CardMain {
+<script lang="ts">
+import DisplayPanel from './components/DisplayPanel.vue';
+
+
+
+export default {
+  components: {
+    DisplayPanel,
+
+},
+  data(){
+    return {
+    cardname:"testando"
+    }
+  }
 }
-</style>
+</script>
+
