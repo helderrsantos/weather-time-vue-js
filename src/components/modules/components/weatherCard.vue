@@ -1,27 +1,31 @@
 <template>
   <div class="cardContent">
-    <h2 class="cidade">Tempo em {{ cidade }}</h2>
+    <h2 class="cidade">
+      <font-awesome-icon icon="fa-solid fa-location-dot" class="imgPin" />
+      Tempo em {{ cidade }}
+    </h2>
     <p class="temperatura">{{ temperatura || '..' }} °C</p>
 
     <div class="cardDetails">
       <div class="cards">
-        <p class="previsao">{{ previsao }}</p>
+      <p>Condição</p>
       <img v-if="icone" :src="getIconUrl(icone)" alt="Ícone do tempo" />
+      <p class="previsao">{{ previsao }}</p>
     </div>
     <div class="cards">
       <p>Umidade</p>
-      <img v-if="icone" :src="getIconUrl(icone)" alt="Ícone do tempo" />
+      <font-awesome-icon icon="fa-droplet"  class="imgHumidity" />
       <p class="umidade">{{ umidade || '..' }}%</p>
     </div>
     <div class="cards">
       <p>Vento</p>
-      <img v-if="icone" :src="getIconUrl(icone)" alt="Ícone do tempo" />
+      <img src="../../../assets/icones/IconWind.svg" alt="Ícone de vento" class="imgWind" />
       <p class="vento">{{ vento || '..' }} km/h</p>
     </div>
     <div class="cards">
-      <p>Mín/Max °C</p>
-      <img v-if="icone" :src="getIconUrl(icone)" alt="Ícone do tempo" />
-      <p class="temp-min-max">{{ tempMin || '..' }} / {{ tempMax || '..' }}</p>
+      <p>Mín / Max °C</p>
+      <font-awesome-icon icon="fa-temperature-low" class="imgTemp" />
+      <p class="temp-min-max">{{ tempMin || '..' }} / <strong>{{ tempMax || '..' }}</strong> °C</p>
     </div>
   </div>
 
@@ -39,6 +43,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 
+
 interface Previsao {
   dia: string;
   temperatura: string;
@@ -50,7 +55,7 @@ const iconBaseUrl = 'https://openweathermap.org/img/wn/';
 export default defineComponent({
   name: 'WeatherCard',
   props: {
-    cidade: String as PropType<string>,
+    cidade: String as PropType<string | undefined>,
     temperatura: String as PropType<string>,
     previsao: String as PropType<string>,
     vento: String as PropType<string>,
@@ -59,7 +64,7 @@ export default defineComponent({
     umidade: String as PropType<string>,
       icone: {
       type: String as PropType<string | undefined>,
-      default: undefined,
+      default: '',
     },
     previsoes: Array as PropType<Array<Previsao>>,
   },
@@ -82,11 +87,36 @@ export default defineComponent({
   text-align: center;
 }
 .temperatura {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 700;
   color: #fff;
   margin-top: 20px;
   text-align: center;
+}
+
+.previsao{
+  font-size: 14px;
+}
+
+.imgPin{
+  height: 22px;
+  margin:4px;
+}
+
+.imgWind{
+  padding:14px
+}
+
+.imgHumidity{
+  height: 24px;
+  margin:14px
+}
+
+.imgTemp{
+  height: 25px;
+  margin: 14px;
+
+
 }
 .cardDetails {
   display: flex;
@@ -107,7 +137,6 @@ export default defineComponent({
   color:#fff;
   text-transform: capitalize;
   text-align: center;
-  font-size: 14px;
 }
 
 

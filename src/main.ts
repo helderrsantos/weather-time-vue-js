@@ -4,9 +4,9 @@ import App from './App.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faUserSecret, faSearch, faCloud } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faSearch, faCloud, faTemperatureLow, faDroplet,faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 
-library.add(faUserSecret,faSearch,faCloud)
+library.add(faUserSecret,faSearch,faCloud,faTemperatureLow, faDroplet,faLocationDot)
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

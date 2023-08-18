@@ -4,7 +4,8 @@
       type="text"
       class="inputSelect"
       placeholder="Selecione uma cidade"
-      :value="cidadeSelecionada"
+      @keydown.enter="buscarCidades"
+      v-model="cidadeSelecionada"
       @input="atualizarCidadeSelecionada"
     />
     <button type="button" class="buttonSelect" @click="buscarCidades()">
@@ -45,6 +46,7 @@ export default defineComponent({
   border: none;
   outline: none;
   padding: 8px 8px;
+  padding-left: 14px;
   border-radius: 25px;
   font-size: 18px;
   background-color: #7c7c7c2b;
@@ -53,6 +55,7 @@ export default defineComponent({
 }::placeholder{
   color:#fff;
   font-style: italic;
+  padding-left: 4px;
 }
 
 .buttonSelect {
@@ -63,6 +66,10 @@ export default defineComponent({
   background-color: #7c7c7c2b;
   cursor: pointer;
   float: right;
+}
+.buttonSelect:hover{
+  background-color: gray;
+  transition: 1s ease;
 }
 
 .search {
