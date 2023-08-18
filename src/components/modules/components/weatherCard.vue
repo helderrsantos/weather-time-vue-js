@@ -85,6 +85,7 @@ export default defineComponent({
   font-size: 30px;
   font-weight: 300;
   text-align: center;
+  font-family: Urbanist;
 }
 .temperatura {
   font-size: 70px;
@@ -92,10 +93,12 @@ export default defineComponent({
   color: #fff;
   margin-top: 20px;
   text-align: center;
+  font-family: Urbanist;
 }
 
 .previsao{
   font-size: 14px;
+  font-family: Urbanist;
 }
 
 .imgPin{
@@ -115,17 +118,16 @@ export default defineComponent({
 .imgTemp{
   height: 25px;
   margin: 14px;
-
-
 }
 .cardDetails {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
   width: 100%;
+  font-family: Urbanist;
 }
 .cards{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   display: flex;
   flex-direction: column;

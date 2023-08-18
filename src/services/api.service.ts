@@ -22,3 +22,4 @@ export async function buscarDadosClima(cidade: string) {
 }
 
 
+
