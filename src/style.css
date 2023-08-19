@@ -18,8 +18,51 @@ body{
   background-attachment: fixed;
 }
 
+.background-sol {
+  background-image: url('./assets/background/Sol.png');
+  background-size: cover;
+}
 
-
+.background-sol-com-nuvem {
+  background-image: url('./assets/background/solComNuvem.jpg');
+  background-size: cover;
+}
+.background-nublado {
+  background-image: url('./assets/background/nublado.jpg');
+  background-size: cover;
+}
+.background-sol-com-chuva {
+  background-image: url('./assets/background/solComChuva.jpg');
+  background-size: cover;
+}
+.background-chuvoso {
+  background-image: url('./assets/background/chuvoso.jpg');
+  background-size: cover;
+}
+.background-temporal {
+  background-image: url('./assets/background/ventania.jpg');
+  background-size: cover;
+}
+.background-neve {
+  background-image: url('./assets/background/neve.jpg');
+  background-size: cover;
+}
+.background-noite {
+  background-image: url('./assets/background/noite.jpg');
+  background-size: cover;
+}
+.background-noiteNublada {
+  background-image: url('./assets/background/noiteNublada.jpg');
+  background-size: cover;
+}
+.background-noiteChuvosa {
+  background-image: url('./assets/background/noiteChuvosa.jpg');
+  background-size: cover;
+}
+.background-noiteComNeve {
+  background-image: url('./assets/background/noiteComNeve.jpg');
+  background-size: cover;
+}
 
 
 

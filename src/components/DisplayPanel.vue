@@ -20,6 +20,7 @@
 import { buscarDadosClima } from '../services/api.service';
 import searchInput from './modules/components/searchInput.vue';
 import weatherCard from './modules/components/weatherCard.vue'
+import {getBackgroundClass} from '../services/iconToBackground.service'
 
 export default {
   name: 'DisplayPanel',
@@ -34,7 +35,7 @@ export default {
       cidade: '',
       temperatura: '',
       previsao: '',
-      umidade: '',
+      umidade: 0,
       icone: '',
       vento: '',
       tempMin: '',
@@ -52,7 +53,7 @@ export default {
           this.cidade = dados.name;
           this.temperatura = (dados.main.temp - 273.15).toFixed(1);
           this.previsao = dados.weather[0].description;
-          this.umidade = dados.main.humidity;
+          this.umidade = parseInt(dados.main.humidity);
           this.icone = dados.weather[0].icon;
           this.vento = dados.wind.speed.toFixed(1)
           this.tempMin = (dados.main.temp_min - 273.15).toFixed(1)
@@ -62,7 +63,7 @@ export default {
           this.cidade = '';
           this.temperatura = '';
           this.previsao = '';
-          this.umidade = '';
+          this.umidade = 0;
           this.icone = '';
           this.vento = '',
           this.tempMin = '',
@@ -75,6 +76,16 @@ export default {
       }
     },
   },
+  computed:{
+    backgroundClass(){
+      return getBackgroundClass(this.icone)
+    }
+  },
+  watch:{
+    backgroundClass(newClass){
+      document.body.className=newClass
+    }
+  }
 };
 </script>
 
@@ -85,6 +96,7 @@ export default {
   padding: 20px;
   width: 125vw;
   max-width: 550px;
+
 }
 </style>
 

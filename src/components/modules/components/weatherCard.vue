@@ -61,7 +61,7 @@ export default defineComponent({
     vento: String as PropType<string>,
     tempMin: String as PropType<string>,
     tempMax: String as PropType<string>,
-    umidade: String as PropType<string>,
+    umidade: Number as PropType<number>,
       icone: {
       type: String as PropType<string | undefined>,
       default: '',
